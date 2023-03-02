@@ -1,12 +1,5 @@
 const removeFromArray = function(array, ...multipleArgs) {
-    let newArray = array;
-    for (let arg of multipleArgs) {
-        newArray = newArray.filter(function (argument) {
-            return arg !== argument;
-        });
-    };
-
-    return newArray;
+    return array.filter(val => !multipleArgs.includes(val))
 };
 
 // Do not edit below this line
