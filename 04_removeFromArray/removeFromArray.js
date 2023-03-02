@@ -1,8 +1,11 @@
-const removeFromArray = function(array, arg1) {
-    const newArray = array.filter(function (arg) { {
-            return arg1 !== arg;
-        }
-    });
+const removeFromArray = function(array, ...multipleArgs) {
+    let newArray = array;
+    for (let arg of multipleArgs) {
+        newArray = newArray.filter(function (argument) {
+            return arg !== argument;
+        });
+    };
+
     return newArray;
 };
 
